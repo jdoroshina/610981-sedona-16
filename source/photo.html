@@ -40,7 +40,9 @@
           <li class="photos__item">
             <article class="photos__wrapper blog">
               <h3 class="blog__title">Народные просторы</h3>
-              <img class="blog__image" src="http://placehold.it/150x100" width="280" height="280" alt="Фотография просторов Седоны">
+              <a class="blog__image-wrapper" href="#">
+                <img class="blog__image" src="http://placehold.it/150x100" width="280" height="280" alt="Фотография просторов Седоны">
+              </a>
               <p class="blog__copyright">Автор фото: Борис</p>
               <span class="blog__likes-count">1350</span>
             </article>
@@ -48,7 +50,9 @@
           <li class="photos__item">
             <article class="photos__wrapper blog">
               <h3 class="blog__title">Местная растительность</h3>
-              <img class="blog__image" src="http://placehold.it/150x100" width="280" height="280" alt="Фотография растительности Седоны">
+              <a class="blog__image-wrapper" href="#">
+                <img class="blog__image" src="http://placehold.it/150x100" width="280" height="280" alt="Фотография растительности Седоны">
+              </a>
               <p class="blog__copyright">Автор фото: Сергей</p>
               <span class="blog__likes-count">143</span>
             </article>
@@ -56,7 +60,9 @@
           <li class="photos__item">
             <article class="photos__wrapper blog">
               <h3 class="blog_title">Дорога на север</h3>
-              <img class="blog__image" src="http://placehold.it/150x100" width="280" height="280" alt="Фотографии северной дороги Седоны">
+              <a class="blog__image-wrapper" href="#">
+                <img class="blog__image" src="http://placehold.it/150x100" width="280" height="280" alt="Фотографии северной дороги Седоны">
+              </a>
               <p class="blog__copyright">Автор фото: Петр</p>
               <span class="blog__likes-count">96</span>
             </article>
@@ -64,12 +70,35 @@
           <li class="photos__item">
             <article class="photos__wrapper blog">
               <h3 class="blog__title">Мост Дьявола</h3>
-              <img class="blog__image" src="http://placehold.it/150x100" width="280" height="280" alt="Фотография достопримечательности &laquo;Мост Дьявола&laquo;">
+              <a class="blog__image-wrapper" href="#">
+                <img class="blog__image" src="http://placehold.it/150x100" width="280" height="280" alt="Фотография достопримечательности &laquo;Мост Дьявола&laquo;">
+              </a>
               <p class="blog__copyright">Автор фото: Антон</p>
               <span class="blog__likes-count">254</span>
             </article>
           </li>
         </ul>
+      </section>
+      <section class="video">
+        <h2 class="visually-hidden">Видео о Седоне</h2>
+        <b class="video__intro">Все еще сомневаетесь?</b>
+        <p class="video__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+        <!-- Обрати внимание, пожалуйста, на разметку видео и контроллеров. есть подозрение, что я наворотила фигни -->
+        <video class="video__player" src="" width="321" height="201" controls preload="auto" poster=""></video>
+        <div class="video__control-remote">
+            <!-- Нужен ли тут input-range? Или все же этот контроллер браузерный встроенный к video? -->
+        </div>
+        <div class="video__control-buttons">
+          <button class="video__replay" type="button">
+            <span class="visually-hidden">Кнопка повтора видео</span>
+          </button>
+          <button class="video__copy-code" type="button">
+              <span class="visually-hidden">Кнопка копирования ссылки</span>
+          </button>
+          <button class="video__full-screen" type="button">
+              <span class="visually-hidden">Кнопка перехода в полноэкранный режим</span>
+          </button>
+        </div>
       </section>
     </main>
     <footer class="page-footer">

@@ -29,7 +29,73 @@
         </div>
       </nav>
     </header>
-
+    <main class="page-main">
+      <section class="feedback">
+        <h1 class="feedback__title">Оставьте свой отзыв</h1>
+        <p class="feedback__descriprion">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        <form class="feedback__form form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="form__wrapper">
+              <legend class="form__title">Представьтесь:</legend>
+              <label class="form__field-title" for="name">Имя*:</label>
+              <input class="form__user-info" type="text" id="name" name="name" placeholder="Петр" required>
+              <label class="form__field-title" for="surname">Фамилия*:</label>
+              <input class="form__user-info" type="text" id="surname" name="surname" placeholder="Иванов" required>
+              <label class="form__field-title" for="patronymic">Отчество:</label>
+              <input class="form__user-info" type="text" id="patronymic" name="patronymic" placeholder="Александрович">
+          </fieldset>
+          <fieldset class="form__wrapper">
+              <legend class="form__title">Контактная информация:</legend>
+              <label class="form__field-title" for="phone-number">Контактный телефон*:</label>
+              <input class="form__user-info form__user-info--tel" type="tel" id="phone-number" name="phone-number" placeholder="Введите телефон" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+              <label class="form__field-title" for="email">Электронная почта*:</label>
+              <input class="form__user-info form__user-info--email" type="email" id="email" name="email" placeholder="Введите e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+          </fieldset>
+          <fieldset class="form__wrapper">
+              <legend class="form__title">Ваше общее впечатление:</legend>
+              <ul class="form__list">
+                <li class="form__item">
+                  <input class="form__radio" type="radio" id="good-mark" name="user-mark" value="good-mark" checked>
+                  <label class="form__control-field" for="good-mark">Скорее положительное</label>
+                </li>
+                <li class="form__item">
+                  <input class="form__radio" type="radio" id="bad-mark" name="user-mark" value="bad-mark">
+                  <label class="form__control-field" for="bad-mark">Скорее отрицательное</label>
+                </li>
+                <li class="form__item">
+                    <input class="form__radio" type="radio" id="no-mark" name="user-mark" value="no-mark">
+                    <label class="form__control-field" for="no-mark">Затрудняюсь ответить</label>
+                  </li>
+              </ul>
+          </fieldset>
+          <fieldset class="form__wrapper">
+              <legend class="form__title">Посещенные достопримечательности:</legend>
+              <ul class="form__list">
+                <li class="form__item">
+                  <input class="form__checkbox" type="checkbox" id="devil-bridge" checked>
+                  <label class="form__control-field" for="devil-bridge">Мост Дьявола</label>
+                </li>
+                <li class="form__item">
+                  <input class="form__checkbox" type="checkbox" id="rock-bell" checked>
+                  <label class="form__control-field" for="rock-bell">Гора-Колокол</label>
+                </li>
+                <li class="form__item">
+                  <input class="form__checkbox" type="checkbox" id="slide-park" checked>
+                  <label class="form__control-field" for="slide-park">Слайд-парк</label>
+                </li>
+                <li class="form__item">
+                  <input class="form__checkbox" type="checkbox" id="red-rock">
+                  <label class="form__control-field" for="red-rock">Красные скалы</label>
+                </li>
+              </ul>
+          </fieldset>
+          <fieldset class="form__wrapper user-comment">
+              <legend class="form__title">Опишите свои эмоции</legend>
+              <textarea class="user-comment__field" name="user-comment" rows="5">Опишите подробно все свои восторги</textarea>
+          </fieldset>
+          <button class="form__submit button" type="button">Отправить отзыв</button>
+        </form>
+      </section>
+    </main>
     <footer class="page-footer">
       <span class="page-footer__hashtag">#visitsedona</span>
       <ul class="page-footer__social-list social">
@@ -57,4 +123,17 @@
       </div>
     </footer>
   </body>
+
+  <section class="modal form-error">
+    <h2 class="visually-hidden">Ошибка в заполнении формы</h2>
+    <b class="form-error__tag">Что-то пошло не так!</b>
+    <p class="form-error__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+    <button class="form-error__submit button" type="button">ОК</button>
+  </section>
+  <section class="modal form-success">
+    <h2 class="visually-hidden">Форма успешно отправлена</h2>
+    <b class="form-success__tag">Ваш отзыв отправлен!</b>
+    <p class="form-success__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+    <button class="form-success__submit button" type="button">Закрыть окно</button>
+  </section>
 </html>
