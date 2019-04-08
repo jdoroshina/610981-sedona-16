@@ -40,7 +40,6 @@
           <li class="photos__item">
             <article class="photos__wrapper blog">
               <h3 class="blog__title">Народные просторы</h3>
-              <!--Пропустила условие тз "картинки -ссылки". Добавила -->
               <a class="blog__image-wrapper" href="#">
                 <img class="blog__image" src="http://placehold.it/150x100" width="280" height="280" alt="Фотография просторов Седоны">
               </a>
@@ -84,8 +83,22 @@
         <h2 class="visually-hidden">Видео о Седоне</h2>
         <b class="video__intro">Все еще сомневаетесь?</b>
         <p class="video__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+        <!-- Обрати внимание, пожалуйста, на разметку видео и контроллеров. есть подозрение, что я наворотила фигни -->
         <video class="video__player" src="" width="321" height="201" controls preload="auto" poster=""></video>
-        <!-- в ТЗ написано "6.2. Работу плеера для проигрывания видео реализовывать не нужно, только вёрстка элементов интерфейса." - то есть как раз только все эти контролеры в разметке? не совсем поняла-->
+        <div class="video__control-remote">
+            <!-- Нужен ли тут input-range? Или все же этот контроллер браузерный встроенный к video? -->
+        </div>
+        <div class="video__control-buttons">
+          <button class="video__replay" type="button">
+            <span class="visually-hidden">Кнопка повтора видео</span>
+          </button>
+          <button class="video__copy-code" type="button">
+              <span class="visually-hidden">Кнопка копирования ссылки</span>
+          </button>
+          <button class="video__full-screen" type="button">
+              <span class="visually-hidden">Кнопка перехода в полноэкранный режим</span>
+          </button>
+        </div>
       </section>
     </main>
     <footer class="page-footer">
